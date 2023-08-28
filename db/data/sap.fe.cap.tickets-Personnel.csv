@@ -1,0 +1,6 @@
+PersonnelUUID;PersonnelName;PersonnelSurname;PersonnelDepartment_code;PersonnelPhone;PersonnelMail;PersonnelAddress
+A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5;John;Doe;0;555-1234;john.doe@example.com;123 Main St, City
+P9Q8R7S6T5U4V3W2X1Y0Z1A2B3C4;Jane;Smith;1;555-5678;jane.smith@example.com;456 Elm St, Town
+D5E6F7G8H9I0J1K2L3M4N5O6P7;Michael;Johnson;2;555-9876;michael.johnson@example.com;789 Oak St, Village
+R4S3T2U1V0W1X2Y3Z4A5B6C7D8;Emily;Williams;3;555-4321;emily.williams@example.com;101 Pine St, Hamlet
+G9H8I7J6K5L4M3N2O1P0Q1R2;David;Brown;0;555-8765;david.brown@example.com;222 Maple St, County
