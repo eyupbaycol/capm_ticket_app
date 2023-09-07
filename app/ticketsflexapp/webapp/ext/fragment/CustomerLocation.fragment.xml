@@ -1,0 +1,44 @@
+<core:FragmentDefinition id="_IDGenFragmentDefinition1" xmlns:core="sap.ui.core" 
+	xmlns="sap.m" xmlns:macros="sap.fe.macros">
+	<mvc:View
+	id="zView"
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:l="sap.ui.layout"
+	xmlns:vbm="sap.ui.vbm">
+	
+	<l:VerticalLayout id="verticalLayout" width="100%">
+
+	<vbm:GeoMap 
+		id="GeoMapControl" 
+		width="100%" 
+		height="400px"
+		centerPosition="-2.197878;53.458970"
+		zoomlevel="10"
+		core:require="{ handler: 'com/fe/ticketsflexapp/ext/fragment/CustomerLocation'}" 
+		>
+
+		<vbm:vos>
+			<vbm:Spots id="GeoMapSpots" 
+				posChangeable="true"
+				scaleChangeable="false">
+				<vbm:items>
+					<vbm:Spot id="Spot" 
+						position="-2.197878;53.458970;0" 
+						type="Success" 
+                        icon="shipping-status" 
+						contentOffset="0;0"						
+						click="handler.onClickSpot">
+					</vbm:Spot>
+				</vbm:items>
+			</vbm:Spots>
+
+		</vbm:vos>
+
+	</vbm:GeoMap>
+	</l:VerticalLayout>
+
+</mvc:View>
+</core:FragmentDefinition>

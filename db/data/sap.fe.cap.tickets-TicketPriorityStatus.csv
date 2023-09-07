@@ -1,6 +1,6 @@
-code;name;
-0;VeryHigh;
-1;High;
-2;Medium;
-3;Low;
-4;VeryLow;
+code;name;criticality
+0;VeryHigh;1
+1;High;1
+2;Medium;2
+3;Low;3
+4;VeryLow;3

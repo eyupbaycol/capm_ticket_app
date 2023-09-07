@@ -1,9 +1,12 @@
 using { sap.fe.cap.tickets as my } from '../db/schema';
 
-service TicketService {
+@odata.draft.enabled
+service TicketService @(path:'/ticketservice') {
 
     entity Ticket as projection on my.Ticket;
     entity Personnel as projection on my.Personnel;
-    entity TicketForWhom as projection on my.TicketForWhom;
-    entity TicketOwner as projection on my.TicketOwner;
+    entity TicketUser as projection on my.TicketUser actions {
+        action changeUserRole(User_Role :  UserRoles: code);
+    };
+    entity UserRoles as projection on my.UserRoles;
 }
