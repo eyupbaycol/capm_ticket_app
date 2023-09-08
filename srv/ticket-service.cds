@@ -8,5 +8,7 @@ service TicketService @(path:'/ticketservice') {
     entity TicketUser as projection on my.TicketUser actions {
         action changeUserRole(User_Role :  UserRoles: code);
     };
+    entity Customer as projection on my.Customer;
     entity UserRoles as projection on my.UserRoles;
+    entity Comments as projection on my.Comments;
 }

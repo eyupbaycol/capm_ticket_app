@@ -10,12 +10,12 @@
 	xmlns:vbm="sap.ui.vbm">
 	
 	<l:VerticalLayout id="verticalLayout" width="100%">
-
+	<Label design="Bold" text="{to_Customer/CustomerName}" />
 	<vbm:GeoMap 
 		id="GeoMapControl" 
 		width="100%" 
 		height="400px"
-		centerPosition="-2.197878;53.458970"
+		centerPosition="{to_Customer/CustomerLocationX};{to_Customer/CustomerLocationY}"
 		zoomlevel="10"
 		core:require="{ handler: 'com/fe/ticketsflexapp/ext/fragment/CustomerLocation'}" 
 		>
@@ -26,7 +26,7 @@
 				scaleChangeable="false">
 				<vbm:items>
 					<vbm:Spot id="Spot" 
-						position="-2.197878;53.458970;0" 
+						position="{to_Customer/CustomerLocationX};{to_Customer/CustomerLocationY};0" 
 						type="Success" 
                         icon="shipping-status" 
 						contentOffset="0;0"						

@@ -141,6 +141,15 @@
                                             },
                                             "title": "Lokasyon Bilgisi",
                                             "type": "XMLFragment"
+                                        },
+                                        "Comments": {
+                                            "template": "com.fe.ticketsflexapp.ext.fragment.Comments",
+                                            "position": {
+                                                "placement": "After",
+                                                "anchor": "CustomerLocation"
+                                            },
+                                            "title": "Konuşmalar",
+                                            "type": "XMLFragment"
                                         }
                                     }
                                 }

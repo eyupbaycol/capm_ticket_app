@@ -1,3 +1,3 @@
-TicketUUID;Subject;TicketStat_code;TicketPriorityStat_code;createdBy;createdAt;LastChangedBy;LastChangedAt
-e87cd3a0331411ec959fd79bb4702f0b;Fiori Projesindeki hataların düzeltilmesi;0;0;Koller;2023-07-07T22:47:58Z;Henry;2023-07-07T07:34:43Z;
-e87cd3a0331411ec959fd79bb4702f0c;Web uygualamaları performans iyileştirmesi;1;2;Koller;2023-07-07T22:47:58Z;Henry;2023-07-07T07:34:43Z;
+TicketUUID;Subject;TicketStat_code;TicketPriorityStat_code;to_Customer_ID;createdBy;createdAt;LastChangedBy;modifiedAt;LastChangedAt;
+e87cd3a0331411ec959fd79bb4702f0b;Fiori Projesindeki hataların düzeltilmesi;0;0;e87cd3a0331411ec919fd79bb4702f01;Koller;2023-07-07T22:47:58Z;Henry;2023-07-07T07:34:43Z
+e87cd3a0331411ec959fd79bb4702f0c;Web uygualamaları performans iyileştirmesi;1;2;e87cd3a0331411Zc959fd79bb4702f02;Koller;2023-07-07T22:47:58Z;Henry;2023-07-07T07:34:43Z

@@ -16,12 +16,9 @@ entity Ticket : managed {
         @Common.Label : 'İşin Önceliği'
         TicketPriorityStat      : Association to TicketPriorityStatus  @readonly  @Common.ValueListWithFixedValues;
         to_User                 : Composition of many TicketUser on to_User.to_ticket = $self;
-/*        to_TicketForWhom        : Composition of many TicketForWhom
-                                      on to_TicketForWhom.to_ticket = $self;
-        to_TicketOwner          : Composition of many TicketOwner
-                                      on to_TicketOwner.to_ticket = $self;
-        to_TicketForInformation : Composition of many TicketForInformation
-                                      on to_TicketForInformation.to_ticket = $self; */
+        to_Customer   : Association to Customer @readonly;
+        to_Comment    : Composition of many Comments on to_Comment.to_Ticket = $self;
+
 }
 
 entity TicketUser {
@@ -39,31 +36,24 @@ entity Personnel {
         PersonnelMail           : String(30);
         PersonnelAddress        : String(100);
         to_TicketUser           : Composition of many TicketUser on to_TicketUser.to_personnel = $self;
- /*       to_TicketForWhom        : Composition of many TicketForWhom
-                                      on to_TicketForWhom.to_personnel = $self;
-        to_TicketOwner          : Composition of many TicketOwner
-                                      on to_TicketOwner.to_personnel = $self;
-        to_TicketForInformation : Composition of many TicketForInformation
-                                      on to_TicketForInformation.to_personnel = $self; */
+        to_Comment              : Composition of many Comments on to_Comment.to_Personnel = $self;
+
+
+}
+entity Customer  {
+    key ID : UUID @odata.Type: 'Edm.String';
+    CustomerName: String(100);
+    CustomerLocationX : String(100);
+    CustomerLocationY: String(100);
+    to_Ticket : Composition of many Ticket on to_Ticket.to_Customer = $self;
 }
 
-/*entity TicketForWhom {
-    key ID           : UUID @odata.Type: 'Edm.String';
-        to_ticket    : Association to Ticket;
-        to_personnel : Association to Personnel;
-}
-
-entity TicketOwner {
-    key ID           : UUID @odata.Type: 'Edm.String';
-        to_ticket    : Association to Ticket;
-        to_personnel : Association to Personnel;
-}
-
-entity TicketForInformation {
-    key ID           : UUID @odata.Type: 'Edm.String';
-        to_ticket    : Association to Ticket;
-        to_personnel : Association to Personnel;
-}*/
+entity Comments {
+    key ID: UUID @odata.Type : 'Edm.String';
+    Comment : String(250);
+    to_Personnel : Association to Personnel;
+    to_Ticket : Association to Ticket;
+ }
 
 entity TicketStatus : CodeList {
     key code : String enum {
