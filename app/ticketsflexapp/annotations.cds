@@ -56,6 +56,12 @@ annotate service.Ticket with @(
             Label : 'Ticket Personelleri',
             ID : 'TicketPersonelleri',
             Target : 'to_User/@UI.LineItem#TicketPersonelleri',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
+            Label : 'deneme',
+            ID : 'deneme',
+            Target : 'to_Comment/@UI.LineItem#deneme',
         }
     ],
     UI.FieldGroup #TicketDetay : {
@@ -131,4 +137,16 @@ annotate service.TicketUser with @(
             },
         ],
     }
+);
+annotate service.Comments with @(
+    UI.LineItem #deneme : [
+        {
+            $Type : 'UI.DataField',
+            Value : Comment,
+            Label : 'Comment',
+        },{
+            $Type : 'UI.DataField',
+            Value : to_Personnel_PersonnelUUID,
+            Label : 'to_Personnel_PersonnelUUID',
+        },]
 );

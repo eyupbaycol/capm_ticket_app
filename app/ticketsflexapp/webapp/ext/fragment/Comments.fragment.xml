@@ -6,10 +6,11 @@
 	xmlns="sap.m">
 	<FeedInput
 		core:require="{ handler: 'com/fe/ticketsflexapp/ext/fragment/Comments'}"
-		post="onPost"
+		post="handler.onPost"
 		icon="https://cdn.vectorstock.com/i/1000x1000/30/97/flat-business-man-user-profile-avatar-icon-vector-4333097.webp"
 		class="sapUiSmallMarginTopBottom" />
 	<List
+		id="comment_list"
 		showSeparators="Inner"
 		items="{to_Comment}" >
 		<FeedListItem

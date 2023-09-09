@@ -4,8 +4,17 @@ sap.ui.define([
     'use strict';
 
     return {
-        onPress: function(oEvent) {
-            MessageToast.show("Custom handler invoked.");
+        onPost: function(oEvent) {
+            var oList = this.byId("comment_list"),
+				oBinding = oList.getBinding("items"),
+				oContext = oBinding.create({
+					"Comment" : oEvent.mParameters.value,
+					"to_Personnel_PersonnelUUID":"G9H8I7J6K5L4M3N2O1P0Q1R2"
+				});
+
+			oContext.created().then(function () {
+				oBinding.refresh();
+			});
         }
     };
 });
