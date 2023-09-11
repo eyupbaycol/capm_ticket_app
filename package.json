@@ -7,11 +7,18 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^7",
+    "@sap/cds-hana": "^2.0.0",
     "@sap/cds-odata-v2-adapter-proxy": "^1.9.21",
-    "express": "^4"
+    "@sap/xssec": "^3",
+    "express": "^4",
+    "passport": "^0.6.0"
+  },
+  "engines": {
+    "node": "^16"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
     "@sap/ux-specification": "^1.108.12"
   },
   "scripts": {
@@ -20,5 +27,20 @@
   },
   "sapux": [
     "app/ticketsflexapp"
-  ]
+  ],
+  "cds": {
+    "requires": {
+      "[production]": {
+        "db": {
+          "kind": "hana-cloud"
+        },
+        "auth": {
+          "kind": "xsuaa"
+        }
+      },
+      "db": {
+        "kind": "sql"
+      }
+    }
+  }
 }

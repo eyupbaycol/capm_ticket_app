@@ -1,0 +1,31 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.TicketViewer",
+      "description": "Ticket Viewer"
+    },
+    {
+      "name": "$XSAPPNAME.TicketManager",
+      "description": "Ticket Manager"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "TicketViewer",
+      "description": "Ticket Viewer",
+      "scope-references": [
+        "$XSAPPNAME.TicketViewer"
+      ],
+      "attribute-references": []
+    },
+    {
+      "name": "TicketManager",
+      "description": "Ticket Manager",
+      "scope-references": [
+        "$XSAPPNAME.TicketManager"
+      ],
+      "attribute-references": []
+    }
+  ]
+}
