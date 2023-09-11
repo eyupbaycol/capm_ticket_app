@@ -15,6 +15,18 @@
             "version": "1.10.5",
             "toolsId": "5636a8b9-b2fa-4d9f-a1d8-a4d0decce65d"
         },
+        "crossNavigation": {
+            "inbounds": {
+              "Ticket-display": {
+                "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+                },
+                "semanticObject": "Ticket",
+                "action": "display"
+              }
+            }
+        },
         "dataSources": {
             "mainService": {
                 "uri": "/ticketservice/",
@@ -182,7 +194,10 @@
             "type": "XML",
             "async": true,
             "id": "appRootView"
-        },
-        "flexEnabled": true
+        }
+    },
+    "sap.cloud": {
+        "public": true,
+        "service": "cloud_tickets_project.service"
     }
 }

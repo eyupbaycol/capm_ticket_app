@@ -15,8 +15,7 @@
 		items="{to_Comment}" >
 		<FeedListItem
 			sender="{to_Personnel/PersonnelName}"
-			icon="https://cdn.vectorstock.com/i/800x800/30/97/flat-business-man-user-profile-avatar-icon-vector-4333097.webp"
-			iconDensityAware="false"
+			iconDensityAware="true"
 			info="Bilgi"
 			text="{Comment}"
 			convertLinksToAnchorTags="All"/>

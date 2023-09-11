@@ -56,12 +56,6 @@ annotate service.Ticket with @(
             Label : 'Ticket Personelleri',
             ID : 'TicketPersonelleri',
             Target : 'to_User/@UI.LineItem#TicketPersonelleri',
-        },
-        {
-            $Type : 'UI.ReferenceFacet',
-            Label : 'deneme',
-            ID : 'deneme',
-            Target : 'to_Comment/@UI.LineItem#deneme',
         }
     ],
     UI.FieldGroup #TicketDetay : {
@@ -84,7 +78,7 @@ annotate service.Ticket with @(
                 $Type : 'UI.DataField',
                 Value : TicketStat.name,
                 Criticality: TicketStat.criticality
-            },],
+            }],
     }
 );
 
